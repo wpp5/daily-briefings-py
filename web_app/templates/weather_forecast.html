@@ -6,12 +6,14 @@
     <h2>Weather Forecast for {{ results["city_name"] }}</h2>
 
     <p>Zip Code: {{ zip_code }}</p>
+    <img src="pic_trulli.jpg" alt="Trulli" width="500" height="333">
 
     <!-- TODO: consider using a table instead of a list -->
     <!-- TODO: consider adding images using the provided icon urls -->
     <ul>
     {% for forecast in results["hourly_forecasts"] %}
-        <li>{{ forecast["timestamp"] }} | {{ forecast["temp"] }} | {{ forecast["conditions"].upper() }}</li>
+        <li>{{ forecast["timestamp"] }} | {{ forecast["temp"] }} | {{ forecast["conditions"].upper()}} | {{forecast["image_url"]}} </li>
+        <img src= {{forecast["image_url"]}} alt="Trulli" width="150" height="150">
     {% endfor %}
     </ul>
 

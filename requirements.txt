@@ -11,7 +11,7 @@ requests
 sendgrid==6.6.0
 Flask
 gunicorn #heroku wants this to know to run the app 
-
+ipython
 
 #
 # TEST
